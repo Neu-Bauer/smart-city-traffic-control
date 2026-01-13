@@ -1,44 +1,52 @@
-#  Smart City Traffic Control
+#  Smart City Traffic Control (Hybrid IoT System)
 
-> **Status:** - Em Desenvolvimento (Fase de Arquitetura e Prototipagem)
+> **Status:** - Em Desenvolvimento (Fase de Arquitetura e Integração)
 
-Um sistema inteligente de gestão de tráfego urbano que utiliza **Visão Computacional** para analisar o fluxo de veículos em tempo real e ajustar dinamicamente os temporizadores dos semáforos, substituindo os modelos estáticos tradicionais.
+Um sistema de gestão de tráfego inteligente que une a facilidade do **Python** para Inteligência Artificial com a performance do **C++** para controle de hardware. O projeto utiliza câmeras para analisar o fluxo de veículos e controlar semáforos físicos em tempo real.
 
 ---
 
-## - Arquitetura da Solução (Planejada)
+## - Arquitetura da Solução
 
-O projeto é dividido em microsserviços containerizados para garantir escalabilidade e facilidade de deploy.
+O sistema opera em uma arquitetura Mestre-Escravo via comunicação Serial:
 
-### 1. Vision Service 
-* **Tecnologia:** Python, OpenCV, YOLOv8.
-* **Função:** Captura o feed de vídeo das câmeras urbanas, detecta veículos e calcula a densidade da via. Envia esses dados (metadados) para a API.
+### 1. Raspberry Pi / PC
+* **Linguagem:** **Python 3**.
+* **Bibliotecas:** `OpenCV`, `YOLOv8` (IA), `PySerial`.
+* **Função:**
+    * Captura imagens das câmeras urbanas.
+    * Processa a imagem usando Redes Neurais para contar veículos.
+    * Toma a decisão lógica (ex: "Trânsito pesado na Via A, abrir semáforo").
+    * Envia o comando via USB/Serial para o controlador.
 
-### 2. Traffic Controller API  
-* **Tecnologia:** Node.js, Express.
-* **Função:** Recebe os dados de densidade, processa a lógica de decisão e define se o semáforo deve abrir ou fechar, priorizando vias congestionadas (Ambulâncias/Emergência no futuro).
-
-### 3. Infraestrutura 
-* **Docker:** Orquestração dos serviços.
-* **Database:** Armazenamento histórico de fluxo para gerar relatórios de mobilidade.
+### 2. Arduino / ESP32
+* **Linguagem:** **C++** (Wiring).
+* **Função:**
+    * Recebe os comandos codificados do Python (ex: string JSON ou bytes).
+    * Controla as portas digitais (Relés/LEDs) com precisão de tempo real.
+    * Garante a segurança do ciclo semafórico (não deixar dois sinais verdes ao mesmo tempo).
 
 ---
 
 ## - Tech Stack
 
-* **Linguagens:** Python (IA/Vision), JavaScript/Node.js (Backend).
-* **Containerização:** Docker & Docker Compose.
-* **Computer Vision:** YOLO (You Only Look Once) / OpenCV.
+### High-Level (Visão & Lógica)
+* ![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white) **Python:** Script principal de automação.
+* ![OpenCV](https://img.shields.io/badge/OpenCV-5C3EE8?style=flat&logo=opencv&logoColor=white) **OpenCV / YOLO:** Processamento de imagem e detecção de objetos.
+
+### Low-Level (Hardware)
+* ![C++](https://img.shields.io/badge/C++-00599C?style=flat&logo=c%2B%2B&logoColor=white) **C++:** Firmware do microcontrolador.
+* ![Arduino](https://img.shields.io/badge/Arduino-00979D?style=flat&logo=arduino&logoColor=white) **Arduino IDE:** Ambiente de desenvolvimento embarcado.
 
 ---
 
 ## - Roadmap
 
-- [x] Definição da Arquitetura e Stack.
-- [ ] Implementação do serviço de detecção de veículos (Python).
-- [ ] Criação da API de controle de tráfego (Node.js).
-- [ ] Configuração do ambiente Docker.
-- [ ] Integração com maquete física (Simulação).
+- [x] Definição da Arquitetura Híbrida (Python + C++).
+- [ ] Script Python: Leitura de câmera e detecção básica.
+- [ ] Firmware C++: Controle dos LEDs e máquina de estados do semáforo.
+- [ ] Integração: Criar protocolo de comunicação Serial (Python conversa com C++).
+- [ ] Montagem da maquete física.
 
 ---
 
