@@ -10,11 +10,11 @@ Um sistema inteligente de gestão de tráfego urbano que utiliza **Visão Comput
 
 O projeto é dividido em microsserviços containerizados para garantir escalabilidade e facilidade de deploy.
 
-### 1. Vision Service (O "Olho") 👁️
+### 1. Vision Service 
 * **Tecnologia:** Python, OpenCV, YOLOv8.
 * **Função:** Captura o feed de vídeo das câmeras urbanas, detecta veículos e calcula a densidade da via. Envia esses dados (metadados) para a API.
 
-### 2. Traffic Controller API (O "Cérebro") 
+### 2. Traffic Controller API  
 * **Tecnologia:** Node.js, Express.
 * **Função:** Recebe os dados de densidade, processa a lógica de decisão e define se o semáforo deve abrir ou fechar, priorizando vias congestionadas (Ambulâncias/Emergência no futuro).
 
