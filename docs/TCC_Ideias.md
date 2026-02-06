@@ -1,1 +1,1 @@
-Rascunhos..
+Dia 01 (02/02/26) - Adicionando a biblioteca YOLO e controle de veiculos e tráficos, testes realizados e tudo funcionando perfeitamente.
