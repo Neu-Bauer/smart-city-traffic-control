@@ -1,14 +1,13 @@
-// --- DEFINIÇÃO DOS PINOS (Hardware) ---
-// VIA 1
-const int V1_VERMELHO = 2;
-const int V1_AMARELO  = 3;
-const int V1_VERDE    = 4;
+// --- DEFINIÇÃO DOS PINOS (Corrigida) ---
+// VIA 1 (Esquerda)
+const int V1_VERMELHO = 5;
+const int V1_AMARELO  = 6;
+const int V1_VERDE    = 7;
 
-// VIA 2
-const int V2_VERMELHO = 5;
-const int V2_AMARELO  = 6;
-const int V2_VERDE    = 7;
-
+// VIA 2 (Direita)
+const int V2_VERMELHO = 2;
+const int V2_AMARELO  = 3;
+const int V2_VERDE    = 4;
 void setup() {
   // Inicia comunicação Serial (Mesma velocidade do Python: 9600)
   Serial.begin(9600);
@@ -24,49 +23,66 @@ void setup() {
 
   // Teste inicial: Pisca tudo 2 vezes para avisar que ligou
   piscarTudo();
+  
+  // Aviso para forçar o Serial Monitor a abrir
+  Serial.println("Arduino Pronto! Digite um estado (1 a 6):");
 }
 
 void loop() {
-  // Verifica se o Python mandou alguma mensagem
+  // Verifica se o Python (ou você no terminal) mandou alguma mensagem
   if (Serial.available() > 0) {
     
-    // Lê o número enviado (Lê até encontrar a quebra de linha '\n')
-    int estadoRecebido = Serial.parseInt();
+    // Lê apenas 1 caractere por vez
+    char comando = Serial.read();
 
-    // Joga fora qualquer lixo que sobrou no buffer
-    Serial.read(); 
+    // Filtro de Segurança: Ignora o "Enter" invisível que o Wokwi manda (\n ou \r)
+    if (comando == '\n' || comando == '\r' || comando == ' ') {
+      return; 
+    }
+
+    // Converte o texto digitado para número matemático
+    int estadoRecebido = comando - '0';
 
     // --- MÁQUINA DE ESTADOS (Hardware) ---
-    // 1 a 6 são os códigos que definimos no Python
     switch (estadoRecebido) {
       case 1: // VIA 1 VERDE
         setSemaforo(1, false, false, true);  // V1: Verde
         setSemaforo(2, true, false, false);  // V2: Vermelho
+        Serial.println("-> Comando 1: Via 1 VERDE / Via 2 VERMELHO");
         break;
 
       case 2: // VIA 1 AMARELO
         setSemaforo(1, false, true, false);  // V1: Amarelo
         setSemaforo(2, true, false, false);  // V2: Vermelho
+        Serial.println("-> Comando 2: Via 1 AMARELO / Via 2 VERMELHO");
         break;
 
       case 3: // SEGURANÇA 1 (AMBOS VERMELHOS)
         setSemaforo(1, true, false, false);
         setSemaforo(2, true, false, false);
+        Serial.println("-> Comando 3: AMBOS VERMELHOS (Seguranca)");
         break;
 
       case 4: // VIA 2 VERDE
         setSemaforo(1, true, false, false);  // V1: Vermelho
         setSemaforo(2, false, false, true);  // V2: Verde
+        Serial.println("-> Comando 4: Via 1 VERMELHO / Via 2 VERDE");
         break;
       
       case 5: // VIA 2 AMARELO
         setSemaforo(1, true, false, false);  // V1: Vermelho
         setSemaforo(2, false, true, false);  // V2: Amarelo
+        Serial.println("-> Comando 5: Via 1 VERMELHO / Via 2 AMARELO");
         break;
 
       case 6: // SEGURANÇA 2 (AMBOS VERMELHOS)
         setSemaforo(1, true, false, false);
         setSemaforo(2, true, false, false);
+        Serial.println("-> Comando 6: AMBOS VERMELHOS (Seguranca)");
+        break;
+        
+      default:
+        Serial.println("-> Comando Invalido! Digite apenas de 1 a 6.");
         break;
     }
   }
