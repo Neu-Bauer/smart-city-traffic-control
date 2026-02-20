@@ -43,7 +43,7 @@ O sistema opera em uma arquitetura Mestre-Escravo via comunicação Serial:
 ## - Roadmap
 
 - [x] Definição da Arquitetura Híbrida (Python + C++).
-- [ ] Script Python: Leitura de câmera e detecção básica.
+- [x] Script Python: Leitura de câmera e detecção básica.
 - [ ] Firmware C++: Controle dos LEDs e máquina de estados do semáforo.
 - [ ] Integração: Criar protocolo de comunicação Serial (Python conversa com C++).
 - [ ] Montagem da maquete física.
