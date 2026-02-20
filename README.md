@@ -49,7 +49,7 @@ O sistema opera em uma arquitetura híbrida de Mestre-Escravo via comunicação 
 
 Abra o terminal na pasta raiz do projeto e crie o ambiente virtual:
 
-bash 
+````bash 
 python -m venv .venv
 Ative o ambiente virtual:
 
@@ -65,6 +65,7 @@ Instale todas as dependências do projeto:
 
 Bash
 pip install opencv-python ultralytics streamlit pandas matplotlib pyserial
+````
 2. Configurando o Hardware (Arduino)
 Abra a Arduino IDE.
 
