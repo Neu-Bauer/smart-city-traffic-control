@@ -11,8 +11,7 @@ class TrafficLogger:
         """Cria o arquivo com cabeçalhos se ele não existir."""
         if not os.path.exists(self.filename):
             with open(self.filename, mode='w', newline='', encoding='utf-8') as f:
-                writer = csv.writer(f, delimiter=';') # Ponto e vírgula é melhor para Excel no Brasil
-                # Estes são os dados que vão gerar seus gráficos depois
+                writer = csv.writer(f, delimiter=';')
                 writer.writerow([
                     "Data_Hora", 
                     "Evento", 
@@ -37,5 +36,4 @@ class TrafficLogger:
                 decisao,
                 f"{tempo_decorrido:.2f}s"
             ])
-        # Feedback no terminal para você saber que salvou
         print(f"   >>> [LOG SALVO] Decisão: {decisao} | Filas: {fila1} x {fila2}")

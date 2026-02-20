@@ -1,72 +1,69 @@
 import pandas as pd
 import matplotlib.pyplot as plt
+import os
 
-def main():
-    print("--- INICIANDO ANÁLISE DE DADOS ---")
-    
-    # 1. Carregar os dados
-    try:
-        df = pd.read_csv('dados_tcc_trafego.csv', sep=';')
-        print("✅ Dados carregados com sucesso!\n")
-    except FileNotFoundError:
-        print("❌ Arquivo 'dados_tcc_trafego.csv' não encontrado. Rode o main.py primeiro.")
+ARQUIVO_CSV = 'dados_tcc_trafego.csv' 
+
+def gerar_graficos():
+    print("Iniciando análise de dados do tráfego...")
+
+    if not os.path.exists(ARQUIVO_CSV):
+        print(f"Erro: O arquivo '{ARQUIVO_CSV}' não foi encontrado.")
         return
 
-    coluna_v1 = 'Fila_Via_1'
-    coluna_v2 = 'Fila_Via_2'
+    try:
+        df = pd.read_csv(ARQUIVO_CSV, sep=None, engine='python', names=['Timestamp', 'Fila_V1', 'Fila_V2', 'Motivo', 'Tempo_Verde'], header=0)
+    except Exception as e:
+        print(f"Erro ao ler o CSV: {e}")
+        return
 
-    # ==========================================
-    # GRÁFICO 1: LINHAS (EVOLUÇÃO DAS FILAS)
-    # ==========================================
+    df['Tempo_Verde'] = df['Tempo_Verde'].astype(str).str.replace('s', '', regex=False).astype(float)
+
+    plt.style.use('ggplot')
+
     plt.figure(figsize=(10, 5))
+    plt.plot(df.index, df['Fila_V1'], label='Via 1 (Carros)', color='#facc15', marker='o')
+    plt.plot(df.index, df['Fila_V2'], label='Via 2 (Carros)', color='#d946ef', marker='o')
     
-    plt.plot(df.index, df[coluna_v1], label='Via 1 (Amarelo)', color='orange', marker='o', linestyle='-')
-    plt.plot(df.index, df[coluna_v2], label='Via 2 (Magenta)', color='purple', marker='x', linestyle='-')
-
-    plt.title('Evolução do Volume de Carros por Via', fontsize=14, fontweight='bold')
-    plt.xlabel('Interações (Tempo Real)', fontsize=12)
-    plt.ylabel('Quantidade de Veículos na Fila', fontsize=12)
+    plt.title('Volume de Veículos no Momento da Troca de Semáforo', fontsize=14, fontweight='bold')
+    plt.xlabel('Número da Intervenção (Troca de Sinal)')
+    plt.ylabel('Quantidade de Veículos')
     plt.legend()
     plt.grid(True, linestyle='--', alpha=0.7)
-    
-    # NOVA LINHA: Trava o eixo Y no zero (remove números negativos)
-    plt.ylim(bottom=0)
-    
     plt.tight_layout()
     
-    # Salvar Gráfico 1
-    nome_imagem1 = 'grafico_filas.png'
-    plt.savefig(nome_imagem1, dpi=300)
-    print(f"✅ Gráfico 1 (Linhas) salvo como: {nome_imagem1}")
+    plt.savefig('grafico_1_volume_filas.png', dpi=300)
+    print("Gráfico 1 gerado: grafico_1_volume_filas.png")
 
-    # ==========================================
-    # GRÁFICO 2: PIZZA (TEMPO DE SINAL VERDE)
-    # ==========================================
-    # O Pandas vai contar quantas vezes a IA decidiu dar prioridade para cada via
-    contagem_v1 = df['Decisao_Tomada'].astype(str).str.contains('Via 1').sum()
-    contagem_v2 = df['Decisao_Tomada'].astype(str).str.contains('Via 2').sum()
+    plt.figure(figsize=(10, 5))
+    plt.bar(df.index, df['Tempo_Verde'], color='#3b82f6', alpha=0.8)
     
+    media_tempo = df['Tempo_Verde'].mean()
+    plt.axhline(y=media_tempo, color='red', linestyle='--', label=f'Média: {media_tempo:.1f}s')
+    
+    plt.title('Variação do Tempo de Sinal Verde (Tempo Dinâmico)', fontsize=14, fontweight='bold')
+    plt.xlabel('Número da Intervenção (Troca de Sinal)')
+    plt.ylabel('Tempo em Segundos (s)')
+    plt.legend()
+    plt.tight_layout()
+    
+    plt.savefig('grafico_2_tempo_dinamico.png', dpi=300)
+    print("Gráfico 2 gerado: grafico_2_tempo_dinamico.png")
+
     plt.figure(figsize=(8, 8))
-    labels = ['Via 1 (Sinal Verde)', 'Via 2 (Sinal Verde)']
-    valores = [contagem_v1, contagem_v2]
-    cores = ['orange', 'purple']
     
-    if sum(valores) > 0:
-        # autopct='%1.1f%%' calcula e mostra a porcentagem automaticamente
-        plt.pie(valores, labels=labels, colors=cores, autopct='%1.1f%%', startangle=90, 
-                textprops={'fontsize': 12, 'fontweight': 'bold'})
-        plt.title('Tempo de Prioridade do Semáforo por Via', fontsize=14, fontweight='bold')
-        
-        # Salvar Gráfico 2
-        nome_imagem2 = 'grafico_pizza_prioridade.png'
-        plt.savefig(nome_imagem2, dpi=300)
-        print(f"✅ Gráfico 2 (Pizza) salvo como: {nome_imagem2}")
-    else:
-        print("⚠️ Sem dados suficientes para o gráfico de pizza.")
+    contagem_motivos = df['Motivo'].value_counts()
+    
+    plt.pie(contagem_motivos, labels=contagem_motivos.index, autopct='%1.1f%%', 
+            startangle=140, colors=plt.cm.Paired.colors)
+    
+    plt.title('Distribuição dos Motivos de Troca de Semáforo', fontsize=14, fontweight='bold')
+    plt.tight_layout()
+    
+    plt.savefig('grafico_3_motivos_troca.png', dpi=300)
+    print("Gráfico 3 gerado: grafico_3_motivos_troca.png")
 
-    # Mostra os gráficos na tela (Vai abrir o primeiro. Feche a janela para ver o segundo!)
-    print("\nFeche a janela do primeiro gráfico para visualizar o segundo.")
-    plt.show()
+    print("\nSucesso! Todos os gráficos foram salvos na sua pasta.")
 
 if __name__ == "__main__":
-    main()
+    gerar_graficos()

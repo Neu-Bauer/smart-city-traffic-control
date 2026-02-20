@@ -34,7 +34,7 @@ def desenhar_painel(img, x, y, luzes, fila, nome, cor_texto):
     cv2.putText(img, f'{nome}: {texto_fila}', (x+40, y+45), cv2.FONT_HERSHEY_SIMPLEX, 0.8, cor_texto, 2)
 
 def main():
-    print("--- INICIANDO SISTEMA INTELIGENTE ---")
+    print("--- INICIANDO SISTEMA ---")
     
     logger = TrafficLogger()
     controlador = TrafficController()

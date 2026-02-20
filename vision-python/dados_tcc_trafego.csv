@@ -1,110 +1,30 @@
 Data_Hora;Evento;Fila_Via_1;Fila_Via_2;Decisao_Tomada;Tempo_Decorrido
-09/02/2026 21:20:53;TROCA_DE_SINAL;3;4;Prioridade Via 2 (Fila Maior);4.39s
-09/02/2026 21:20:59;TROCA_DE_SINAL;4;3;Prioridade Via 1 (Fila Maior);3.08s
-09/02/2026 21:21:05;TROCA_DE_SINAL;4;6;Prioridade Via 2 (Fila Maior);3.01s
-09/02/2026 21:21:11;TROCA_DE_SINAL;4;3;Prioridade Via 1 (Fila Maior);3.01s
-09/02/2026 21:21:17;TROCA_DE_SINAL;2;4;Prioridade Via 2 (Fila Maior);3.03s
-09/02/2026 21:21:23;TROCA_DE_SINAL;3;1;Prioridade Via 1 (Fila Maior);3.04s
-09/02/2026 21:21:29;TROCA_DE_SINAL;2;3;Prioridade Via 2 (Fila Maior);3.10s
-09/02/2026 21:21:37;TROCA_DE_SINAL;4;3;Prioridade Via 1 (Fila Maior);4.85s
-09/02/2026 21:21:46;TROCA_DE_SINAL;2;3;Prioridade Via 2 (Fila Maior);5.37s
-09/02/2026 21:21:52;TROCA_DE_SINAL;5;3;Prioridade Via 1 (Fila Maior);3.43s
-09/02/2026 21:21:58;TROCA_DE_SINAL;3;4;Prioridade Via 2 (Fila Maior);3.02s
-09/02/2026 21:22:07;TROCA_DE_SINAL;5;4;Prioridade Via 1 (Fila Maior);5.57s
-09/02/2026 21:22:13;TROCA_DE_SINAL;4;5;Prioridade Via 2 (Fila Maior);3.00s
-09/02/2026 21:22:19;TROCA_DE_SINAL;3;2;Prioridade Via 1 (Fila Maior);3.07s
-09/02/2026 21:22:27;TROCA_DE_SINAL;3;4;Prioridade Via 2 (Fila Maior);4.68s
-09/02/2026 21:22:33;TROCA_DE_SINAL;4;3;Prioridade Via 1 (Fila Maior);3.07s
-09/02/2026 21:22:39;TROCA_DE_SINAL;3;4;Prioridade Via 2 (Fila Maior);3.02s
-09/02/2026 21:22:45;TROCA_DE_SINAL;4;3;Prioridade Via 1 (Fila Maior);3.03s
-09/02/2026 21:22:51;TROCA_DE_SINAL;1;2;Prioridade Via 2 (Fila Maior);3.56s
-09/02/2026 21:22:58;TROCA_DE_SINAL;5;2;Prioridade Via 1 (Fila Maior);3.03s
-09/02/2026 21:23:04;TROCA_DE_SINAL;3;4;Prioridade Via 2 (Fila Maior);3.06s
-09/02/2026 22:05:36;TROCA_DE_SINAL;3;4;Prioridade Via 2 (Fila Maior);5.35s
-09/02/2026 22:22:07;TROCA_DE_SINAL;3;4;Prioridade Via 2 (Fila Maior);3.83s
-09/02/2026 22:22:13;TROCA_DE_SINAL;5;4;Prioridade Via 1 (Fila Maior);3.01s
-09/02/2026 22:22:19;TROCA_DE_SINAL;3;4;Prioridade Via 2 (Fila Maior);3.12s
-09/02/2026 22:22:25;TROCA_DE_SINAL;3;2;Prioridade Via 1 (Fila Maior);3.04s
-09/02/2026 22:22:33;TROCA_DE_SINAL;1;2;Prioridade Via 2 (Fila Maior);4.51s
-09/02/2026 22:22:39;TROCA_DE_SINAL;3;2;Prioridade Via 1 (Fila Maior);3.00s
-09/02/2026 22:22:45;TROCA_DE_SINAL;4;5;Prioridade Via 2 (Fila Maior);3.00s
-09/02/2026 22:22:55;TROCA_DE_SINAL;3;2;Prioridade Via 1 (Fila Maior);7.62s
-09/02/2026 22:23:02;TROCA_DE_SINAL;2;4;Prioridade Via 2 (Fila Maior);3.04s
-09/02/2026 22:23:08;TROCA_DE_SINAL;3;1;Prioridade Via 1 (Fila Maior);3.01s
-09/02/2026 22:23:14;TROCA_DE_SINAL;2;3;Prioridade Via 2 (Fila Maior);3.20s
-09/02/2026 22:23:22;TROCA_DE_SINAL;5;4;Prioridade Via 1 (Fila Maior);5.04s
-09/02/2026 22:23:28;TROCA_DE_SINAL;2;3;Prioridade Via 2 (Fila Maior);3.25s
-09/02/2026 22:23:34;TROCA_DE_SINAL;4;3;Prioridade Via 1 (Fila Maior);3.04s
-09/02/2026 22:23:46;TROCA_DE_SINAL;3;4;Prioridade Via 2 (Fila Maior);8.51s
-09/02/2026 22:23:52;TROCA_DE_SINAL;4;3;Prioridade Via 1 (Fila Maior);3.10s
-09/02/2026 22:23:58;TROCA_DE_SINAL;3;4;Prioridade Via 2 (Fila Maior);3.06s
-09/02/2026 22:26:35;TROCA_DE_SINAL;3;4;Prioridade Via 2 (Fila Maior);4.65s
-09/02/2026 22:26:42;TROCA_DE_SINAL;4;3;Prioridade Via 1 (Fila Maior);3.41s
-18/02/2026 20:19:55;TROCA_DE_SINAL;0;999;Prioridade Via 2 (Fila Maior);3.00s
-18/02/2026 20:20:01;TROCA_DE_SINAL;999;0;Prioridade Via 1 (Fila Maior);3.33s
-18/02/2026 20:20:08;TROCA_DE_SINAL;3;4;Prioridade Via 2 (Fila Maior);3.16s
-18/02/2026 20:20:14;TROCA_DE_SINAL;3;2;Prioridade Via 1 (Fila Maior);3.02s
-18/02/2026 20:20:20;TROCA_DE_SINAL;2;4;Prioridade Via 2 (Fila Maior);3.03s
-18/02/2026 20:20:26;TROCA_DE_SINAL;4;0;Prioridade Via 1 (Fila Maior);3.22s
-18/02/2026 20:20:32;TROCA_DE_SINAL;2;3;Prioridade Via 2 (Fila Maior);3.11s
-18/02/2026 20:20:38;TROCA_DE_SINAL;999;0;Prioridade Via 1 (Fila Maior);3.24s
-18/02/2026 20:20:44;TROCA_DE_SINAL;0;999;Prioridade Via 2 (Fila Maior);3.00s
-18/02/2026 20:20:51;TROCA_DE_SINAL;4;2;Prioridade Via 1 (Fila Maior);3.10s
-18/02/2026 20:20:57;TROCA_DE_SINAL;2;4;Prioridade Via 2 (Fila Maior);3.30s
-18/02/2026 20:21:03;TROCA_DE_SINAL;4;3;Prioridade Via 1 (Fila Maior);3.07s
-18/02/2026 20:21:09;TROCA_DE_SINAL;1;6;Prioridade Via 2 (Fila Maior);3.03s
-18/02/2026 20:21:18;TROCA_DE_SINAL;3;2;Prioridade Via 1 (Fila Maior);5.61s
-18/02/2026 20:21:24;TROCA_DE_SINAL;2;4;Prioridade Via 2 (Fila Maior);3.02s
-18/02/2026 20:21:30;TROCA_DE_SINAL;2;0;Prioridade Via 1 (Fila Maior);3.32s
-18/02/2026 20:21:36;TROCA_DE_SINAL;2;3;Prioridade Via 2 (Fila Maior);3.20s
-18/02/2026 20:22:10;TROCA_DE_SINAL;0;999;Prioridade Via 2 (Fila Maior);3.10s
-18/02/2026 20:22:16;TROCA_DE_SINAL;999;0;Prioridade Via 1 (Fila Maior);3.02s
-18/02/2026 20:22:22;TROCA_DE_SINAL;3;4;Prioridade Via 2 (Fila Maior);3.12s
-18/02/2026 20:22:29;TROCA_DE_SINAL;4;3;Prioridade Via 1 (Fila Maior);3.02s
-18/02/2026 20:22:35;TROCA_DE_SINAL;1;2;Prioridade Via 2 (Fila Maior);3.91s
-18/02/2026 20:22:42;TROCA_DE_SINAL;3;1;Prioridade Via 1 (Fila Maior);3.08s
-18/02/2026 20:34:05;TROCA_DE_SINAL;0;999;Prioridade Via 2 (Fila Maior);3.03s
-18/02/2026 20:34:11;TROCA_DE_SINAL;1;0;Prioridade Via 1 (Fila Maior);3.05s
-18/02/2026 20:34:17;TROCA_DE_SINAL;0;999;Prioridade Via 2 (Fila Maior);3.02s
-18/02/2026 20:34:23;TROCA_DE_SINAL;4;3;Prioridade Via 1 (Fila Maior);3.03s
-18/02/2026 20:34:29;TROCA_DE_SINAL;2;6;Prioridade Via 2 (Fila Maior);3.06s
-18/02/2026 20:34:45;TROCA_DE_SINAL;4;2;Prioridade Via 1 (Fila Maior);13.06s
-18/02/2026 20:34:52;TROCA_DE_SINAL;3;4;Prioridade Via 2 (Fila Maior);3.08s
-18/02/2026 20:34:58;TROCA_DE_SINAL;3;2;Prioridade Via 1 (Fila Maior);3.05s
-18/02/2026 20:35:04;TROCA_DE_SINAL;1;3;Prioridade Via 2 (Fila Maior);3.04s
-18/02/2026 20:35:10;TROCA_DE_SINAL;2;0;Prioridade Via 1 (Fila Maior);3.01s
-18/02/2026 20:35:17;TROCA_DE_SINAL;4;5;Prioridade Via 2 (Fila Maior);4.06s
-18/02/2026 20:35:23;TROCA_DE_SINAL;999;0;Prioridade Via 1 (Fila Maior);3.05s
-18/02/2026 20:35:29;TROCA_DE_SINAL;1;4;Prioridade Via 2 (Fila Maior);3.06s
-18/02/2026 20:35:36;TROCA_DE_SINAL;999;0;Prioridade Via 1 (Fila Maior);3.61s
-18/02/2026 20:35:42;TROCA_DE_SINAL;3;5;Prioridade Via 2 (Fila Maior);3.02s
-18/02/2026 20:35:49;TROCA_DE_SINAL;4;2;Prioridade Via 1 (Fila Maior);3.40s
-18/02/2026 20:35:55;TROCA_DE_SINAL;2;3;Prioridade Via 2 (Fila Maior);3.20s
-18/02/2026 20:36:01;TROCA_DE_SINAL;3;2;Prioridade Via 1 (Fila Maior);3.08s
-18/02/2026 20:36:07;TROCA_DE_SINAL;1;3;Prioridade Via 2 (Fila Maior);3.01s
-18/02/2026 20:36:13;TROCA_DE_SINAL;2;1;Prioridade Via 1 (Fila Maior);3.04s
-18/02/2026 20:36:20;TROCA_DE_SINAL;4;5;Prioridade Via 2 (Fila Maior);3.17s
-18/02/2026 20:36:26;TROCA_DE_SINAL;999;0;Prioridade Via 1 (Fila Maior);3.06s
-18/02/2026 20:36:32;TROCA_DE_SINAL;1;6;Prioridade Via 2 (Fila Maior);3.03s
-18/02/2026 20:36:38;TROCA_DE_SINAL;999;0;Prioridade Via 1 (Fila Maior);3.04s
-18/02/2026 20:36:44;TROCA_DE_SINAL;3;5;Prioridade Via 2 (Fila Maior);3.05s
-18/02/2026 20:36:50;TROCA_DE_SINAL;4;2;Prioridade Via 1 (Fila Maior);3.04s
-18/02/2026 20:37:21;TROCA_DE_SINAL;0;999;Prioridade Via 2 (Fila Maior);3.08s
-18/02/2026 20:37:27;TROCA_DE_SINAL;2;0;Prioridade Via 1 (Fila Maior);3.04s
-18/02/2026 20:37:33;TROCA_DE_SINAL;0;999;Prioridade Via 2 (Fila Maior);3.04s
-18/02/2026 20:37:39;TROCA_DE_SINAL;4;3;Prioridade Via 1 (Fila Maior);3.03s
-18/02/2026 20:40:16;TROCA_DE_SINAL;0;999;Prioridade Via 2 (Fila Maior);3.03s
-18/02/2026 20:40:23;TROCA_DE_SINAL;3;0;Prioridade Via 1 (Fila Maior);3.59s
-18/02/2026 20:40:32;TROCA_DE_SINAL;2;3;Prioridade Via 2 (Fila Maior);5.88s
-18/02/2026 20:40:46;TROCA_DE_SINAL;999;0;Prioridade Via 1 (Fila Maior);10.85s
-18/02/2026 20:46:20;TROCA_DE_SINAL;0;1;Prioridade Via 2 (Fila Maior);3.37s
-18/02/2026 20:46:27;TROCA_DE_SINAL;999;0;Prioridade Via 1 (Fila Maior);4.51s
-18/02/2026 20:46:33;TROCA_DE_SINAL;0;2;Prioridade Via 2 (Fila Maior);3.01s
-18/02/2026 20:46:39;TROCA_DE_SINAL;2;0;Prioridade Via 1 (Fila Maior);3.01s
-18/02/2026 20:46:45;TROCA_DE_SINAL;1;2;Prioridade Via 2 (Fila Maior);3.11s
-18/02/2026 20:46:53;TROCA_DE_SINAL;1;0;Prioridade Via 1 (Fila Maior);4.54s
-18/02/2026 20:46:59;TROCA_DE_SINAL;0;2;Prioridade Via 2 (Fila Maior);3.04s
-18/02/2026 20:47:05;TROCA_DE_SINAL;2;1;Prioridade Via 1 (Fila Maior);3.19s
-18/02/2026 20:47:11;TROCA_DE_SINAL;1;2;Prioridade Via 2 (Fila Maior);3.14s
-18/02/2026 20:47:18;TROCA_DE_SINAL;2;0;Prioridade Via 1 (Fila Maior);3.10s
-18/02/2026 21:10:46;TROCA_DE_SINAL;1;3;Fluxo Normal Otimizado (Via 2 > Via 1);10.59s
+20/02/2026 20:09:09;TROCA_DE_SINAL;1;3;Fluxo Normal Otimizado (Via 2 > Via 1);10.72s
+20/02/2026 20:09:26;TROCA_DE_SINAL;999;0;Limite Maximo Atingido (Via 1);11.99s
+20/02/2026 20:09:41;TROCA_DE_SINAL;0;999;Limite Maximo Atingido (Via 2);10.52s
+20/02/2026 20:10:34;TROCA_DE_SINAL;1;3;Fluxo Normal Otimizado (Via 2 > Via 1);10.39s
+20/02/2026 20:22:11;TROCA_DE_SINAL;1;3;Fluxo Normal Otimizado (Via 2 > Via 1);10.02s
+20/02/2026 20:22:26;TROCA_DE_SINAL;3;1;Fluxo Normal Otimizado (Via 1 > Via 2);10.01s
+20/02/2026 20:22:46;TROCA_DE_SINAL;0;999;Limite Maximo Atingido (Via 2);15.19s
+20/02/2026 20:23:02;TROCA_DE_SINAL;3;2;Fluxo Normal Otimizado (Via 1 > Via 2);10.02s
+20/02/2026 20:23:26;TROCA_DE_SINAL;1;3;Fluxo Normal Otimizado (Via 2 > Via 1);10.74s
+20/02/2026 20:27:30;TROCA_DE_SINAL;1;3;Fluxo Normal Otimizado (Via 2 > Via 1);10.01s
+20/02/2026 20:27:45;TROCA_DE_SINAL;3;1;Fluxo Normal Otimizado (Via 1 > Via 2);10.11s
+20/02/2026 20:28:06;TROCA_DE_SINAL;0;999;Limite Maximo Atingido (Via 2);15.69s
+20/02/2026 20:28:47;TROCA_DE_SINAL;1;3;Fluxo Normal Otimizado (Via 2 > Via 1);10.65s
+20/02/2026 20:29:02;TROCA_DE_SINAL;3;1;Fluxo Normal Otimizado (Via 1 > Via 2);10.01s
+20/02/2026 20:29:22;TROCA_DE_SINAL;0;999;Limite Maximo Atingido (Via 2);14.94s
+20/02/2026 20:29:37;TROCA_DE_SINAL;3;1;Fluxo Normal Otimizado (Via 1 > Via 2);10.54s
+20/02/2026 20:29:54;TROCA_DE_SINAL;0;3;Fluxo Normal Otimizado (Via 2 > Via 1);11.48s
+20/02/2026 20:30:10;TROCA_DE_SINAL;3;0;Fluxo Normal Otimizado (Via 1 > Via 2);10.79s
+20/02/2026 20:30:29;TROCA_DE_SINAL;1;3;Fluxo Normal Otimizado (Via 2 > Via 1);13.98s
+20/02/2026 20:30:47;TROCA_DE_SINAL;3;1;Fluxo Normal Otimizado (Via 1 > Via 2);13.03s
+20/02/2026 20:31:02;TROCA_DE_SINAL;0;4;Fluxo Normal Otimizado (Via 2 > Via 1);10.30s
+20/02/2026 20:31:18;TROCA_DE_SINAL;3;1;Fluxo Normal Otimizado (Via 1 > Via 2);11.07s
+20/02/2026 20:31:35;TROCA_DE_SINAL;1;3;Fluxo Normal Otimizado (Via 2 > Via 1);11.88s
+20/02/2026 20:31:53;TROCA_DE_SINAL;3;1;Fluxo Normal Otimizado (Via 1 > Via 2);12.52s
+20/02/2026 20:32:08;TROCA_DE_SINAL;0;3;Fluxo Normal Otimizado (Via 2 > Via 1);10.02s
+20/02/2026 20:33:23;TROCA_DE_SINAL;1;3;Fluxo Normal Otimizado (Via 2 > Via 1);10.68s
+20/02/2026 20:33:38;TROCA_DE_SINAL;3;2;Fluxo Normal Otimizado (Via 1 > Via 2);10.01s
+20/02/2026 20:33:58;TROCA_DE_SINAL;0;999;Limite Maximo Atingido (Via 2);14.30s
+20/02/2026 20:34:13;TROCA_DE_SINAL;3;1;Fluxo Normal Otimizado (Via 1 > Via 2);10.01s
