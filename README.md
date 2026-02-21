@@ -19,6 +19,7 @@ Este projeto vai além da simples contagem de veículos, aplicando conceitos de 
 O sistema opera em uma arquitetura híbrida de Mestre-Escravo via comunicação Serial:
 
 ### 1. Servidor CCO (Cérebro - Python)
+
 * **Linguagem:** Python 3.x
 * **Função:** * Captura imagens das câmeras urbanas.
     * Processa a imagem usando Redes Neurais (YOLOv8) para identificar e contar veículos.
@@ -26,6 +27,7 @@ O sistema opera em uma arquitetura híbrida de Mestre-Escravo via comunicação 
     * Renderiza a interface Web de controle (Streamlit).
 
 ### 2. Controlador de Hardware (Músculo - Arduino/C++)
+
 * **Linguagem:** C++ (Wiring)
 * **Função:**
     * Recebe os comandos do servidor Python.
@@ -41,6 +43,7 @@ O sistema opera em uma arquitetura híbrida de Mestre-Escravo via comunicação 
 * PySerial (Comunicação)
 
 **Low-Level (Hardware)**
+
 * C++ / Arduino IDE
 
 ## Instalação e Configuração
@@ -67,6 +70,7 @@ Bash
 pip install opencv-python ultralytics streamlit pandas matplotlib pyserial
 ````
 2. Configurando o Hardware (Arduino)
+
 Abra a Arduino IDE.
 
 Carregue o arquivo traffic_control.ino (localizado na pasta do firmware).
@@ -76,13 +80,17 @@ Conecte o Arduino via cabo USB e faça o upload para a placa.
 Verifique a porta COM (ex: COM3) e atualize no script Python, se necessário.
 
 * Como Executar o Sistema
-Com o ambiente virtual ativado e o Arduino conectado, inicie o servidor rodando:
 
+Com o ambiente virtual ativado e o Arduino conectado, inicie o servidor rodando:
+````
 Bash
 streamlit run dashboard.py
+````
+
 O painel do CCO abrirá automaticamente no seu navegador.
 
 * Roadmap e Histórico de Desenvolvimento
+
 [x] Sprint 1: Prova de Conceito (PoC) da Visão Computacional (YOLOv8) e Mapeamento de Zonas Espaciais.
 
 [x] Sprint 2: Máquina de Estados e Firmware C++ (Controle de LEDs físico).
