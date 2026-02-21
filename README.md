@@ -100,4 +100,5 @@ O painel do CCO abrirá automaticamente no seu navegador.
 [ ] Sprint 8: Montagem do protótipo e da maquete física do cruzamento.
 
 * Licença
+
 Este projeto é parte do Trabalho de Conclusão de Curso (TCC) em Engenharia de Software.
